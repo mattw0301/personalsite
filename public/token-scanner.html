@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Scanner | Matthew White</title>
+  
+  <link rel="stylesheet" href="/css/theme.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/components/navbar.css" />
+  <link rel="stylesheet" href="/css/components/projects.css" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  >
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">MW</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html#projects">Back to Projects</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="token-scanner">
+    <div class="section-container">
+      <h2 class="section-title">ERC-20 Token Scanner</h2>
+      <p class="scanner-intro">
+        Scan ERC-20 token transfers on the Ethereum blockchain. Enter an address or two
+        (for "between" mode), and optionally filter by minimum amount.
+      </p>
+      <div class="scanner-container">
+        <div class="scanner-form">
+          <div class="form-group">
+            <label for="token-select">Select Token</label>
+            <select id="token-select" class="form-control">
+              <option value="usdc">USDC</option>
+              <option value="usdt">USDT</option>
+              <option value="dai">DAI</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="scan-mode">Scan Mode</label>
+            <select id="scan-mode" class="form-control">
+              <option value="both">Both (From/To)</option>
+              <option value="from">From Address</option>
+              <option value="to">To Address</option>
+              <option value="between">Between Addresses</option>
+            </select>
+          </div>
+          <div class="form-group" id="address-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" class="form-control" placeholder="0x...">
+          </div>
+          <div class="form-group d-none" id="address2-group">
+            <label for="address2">Second Address</label>
+            <input type="text" id="address2" class="form-control" placeholder="0x...">
+          </div>
+          <div class="form-group">
+            <label for="min-amount">Minimum Amount (Optional)</label>
+            <input type="number" id="min-amount" class="form-control" placeholder="e.g., 1000">
+          </div>
+          <button id="scan-button" class="scan-button">Scan Transfers</button>
+        </div>
+
+        <div class="scanner-results">
+          <div class="results-header">
+            <h3>Results</h3>
+            <div class="results-stats d-none" id="results-stats">
+              <p>From transfers: <span id="from-count">0</span></p>
+              <p>To transfers: <span id="to-count">0</span></p>
+              <p>Total unique: <span id="unique-count">0</span></p>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:15px;">
+            <label for="search-transfers">Search Transfers</label>
+            <input
+              type="text"
+              id="search-transfers"
+              class="form-control"
+              placeholder="Search by From / To / Hash"
+            >
+          </div>
+
+          <div class="results-table-container table-scroll-wrapper">
+            <table class="results-table d-none" id="results-table">
+              <thead>
+                <tr>
+                  <th>Block</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th>Amount</th>
+                  <th>Token</th>
+                  <th>Hash</th>
+                </tr>
+              </thead>
+              <tbody id="results-body"></tbody>
+            </table>
+            <div class="no-results" id="no-results">
+              <p>Enter an address and click "Scan Transfers" to see results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 Matthew White.</p>
+    </div>
+  </footer>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+  
+  <script src="/js/theme.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/projects/token-scanner.js"></script>
+</body>
+</html>

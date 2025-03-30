@@ -1,0 +1,15 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "vercel-build": "echo 'Build step completed'"
+  },
+  "type": "commonjs"
+}
