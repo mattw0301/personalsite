@@ -1,4 +1,4 @@
-# Matthew White's Personal Website
+# matthewwhite.xyz
 
 A personal portfolio website showcasing my projects, skills, and experience.
 
