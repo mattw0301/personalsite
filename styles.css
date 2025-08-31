@@ -596,6 +596,10 @@ footer p {
     margin-bottom: 20px;
 }
 
+.search-transfers-group {
+    margin-bottom: 15px;
+}
+
 .form-control {
     width: 100%;
     padding: 10px;
