@@ -16,6 +16,10 @@
     {
       "src": "styles.css",
       "use": "@vercel/static"
+    },
+    {
+      "src": "token-scanner.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -30,6 +34,10 @@
     {
       "src": "/styles.css",
       "dest": "styles.css"
+    },
+    {
+      "src": "/token-scanner.html",
+      "dest": "token-scanner.html"
     },
     {
       "src": "/",
